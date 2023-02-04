@@ -57,7 +57,19 @@ def myview(request):
         context={ } #dict containing data to be sent to the client  
     return render(request, 'mytemplate.html', context) 
 
+def menuitems(request, dish):
+    items = {
+        'pasta': 'Pasta is a type of noodle made from combination of wheat, water or eggs.',
+        'falafel': 'Falafel are deep fried patties or balls made from ...',
+        'cheesecake': 'Cheesecake is a type of dessert made with cream, soft cheese on top of cookie, pastry crust or graham cracker and fruit sauce topping.'
+    }
+    description = items[dish]
+    return HttpResponse(f"<h2> {dish.title()} </h2>"+  description)
 
+# def qryview(request): 
+#     name = request.GET['name'] 
+#     id = request.GET['id'] 
+#     return HttpResponse("Name:{} UserID:{}".format(name, id)) 
 
 #Sub-class of the View class
 #     from django.views import View 
