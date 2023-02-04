@@ -25,4 +25,5 @@ urlpatterns = [
     path('menu/', views.menu),
     #path('', include('myapp.urls'))
     path('main/', include('myapp.urls')),
+    path('dishes/<str:dish>', views.menuitems, name='dish'),
 ]
