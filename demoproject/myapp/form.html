@@ -1,0 +1,7 @@
+<form action="/myapp/login" method="post">
+<!-- <form action="{% url 'myapp:login' %}" method="post"> -->
+    {% csrf_token %}
+    <p>UserID: <input type="text" name="id"></p>
+    <p>Name: <input type="name" name="name"></p> 
+    <input type='submit'> 
+</form>
